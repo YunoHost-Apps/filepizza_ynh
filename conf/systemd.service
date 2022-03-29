@@ -1,0 +1,17 @@
+[Unit]
+Description=FilePizza: peer-to-peer file transfers
+After=syslog.target network.target
+
+[Service]
+Type=simple
+User=__APP__
+Group=__APP__
+WorkingDirectory=__FINALPATH__
+Environment="PATH=__ENV_PATH__"
+Environment="PORT=__PORT__"
+Environment="NODE_ENV=production"
+ExecStart=__YNH_NODE__ ./dist/index.js
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
