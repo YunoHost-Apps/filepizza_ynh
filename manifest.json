@@ -9,12 +9,12 @@
     "version": "1.1.0~ynh1",
     "url": "https://file.pizza/",
         "upstream": {
-        "license": "MIT",
+        "license": "BSD-3-Clause",
         "website": "https://file.pizza/",
         "demo": "https://file.pizza/",
         "code": "https://github.com/kern/filepizza"
     },
-    "license": "MIT",
+    "license": "BSD-3-Clause",
     "maintainer": {
         "name": "eric_G"
     },
