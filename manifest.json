@@ -4,7 +4,7 @@
     "packaging_format": 1,
     "description": {
         "en": "Peer-to-peer file transfers in your browser",
-        "fr": "Transferts de fichiers peer-to-peer dans votre navigateur"
+        "fr": "Transferts de fichiers pair-à-pair dans votre navigateur"
     },
     "version": "1.8.7~ynh1",
     "url": "https://file.pizza/",
