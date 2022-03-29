@@ -1,71 +1,42 @@
-# instant.io pour YunoHost
+# FilePizza pour YunoHost
 
-[![Niveau d'intégration](https://dash.yunohost.org/integration/etherpad.svg)](https://dash.yunohost.org/appci/app/etherpad) ![](https://ci-apps.yunohost.org/ci/badges/etherpad.status.svg) ![](https://ci-apps.yunohost.org/ci/badges/etherpad.maintain.svg)  
-[![Installer Etherpad-Lite avec YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=etherpad)
+[![Niveau d'intégration](https://dash.yunohost.org/integration/filepizza.svg)](https://dash.yunohost.org/appci/app/filepizza) ![](https://ci-apps.yunohost.org/ci/badges/filepizza.status.svg) ![](https://ci-apps.yunohost.org/ci/badges/filepizza.maintain.svg)  
+[![Installer FilePizza avec YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=filepizza)
 
 *[Read this readme in english.](./README.md)*
+*[Lire ce readme en français.](./README_fr.md)*
 
-> *Ce package vous permet d'installer Etherpad-Lite rapidement et simplement sur un serveur YunoHost.  
-Si vous n'avez pas YunoHost, merci de regarder [ici](https://yunohost.org/#/install_fr) pour savoir comment l'installer et en profiter.*
+> *Ce package vous permet d'installer FilePizza rapidement et simplement sur un serveur YunoHost.
+Si vous n'avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) pour savoir comment l'installer et en profiter.*
 
-> :warning: Ce paquet installe Etherpad-Lite (sans MyPads et divers plugins). Il utilise PostgreSQL comme base de données.
-> Si vous souhaitez installer Etherpad avec MyPads, utilisez le paquet [Etherpad MyPads](https://github.com/YunoHost-Apps/etherpad_mypads_ynh).
+## Vue d'ensemble
 
-## Résumé
-Etherpad vous permet d'éditer des documents de manière collaborative en temps réel, un peu comme un éditeur multi-joueurs en direct qui s'exécute dans votre navigateur. Rédigez des articles, des communiqués de presse, des listes de choses à faire, etc. avec vos amis, camarades ou collègues, tous travaillant sur le même document en même temps.
+Using WebRTC, FilePizza eliminates the initial upload step required by other web-based file sharing services. When senders initialize a transfer, they receive a "tempalink" they can distribute to recipients. Upon visiting this link, recipients' browsers connect directly to the sender’s browser and may begin downloading the selected file. Because data is never stored in an intermediary server, the transfer is fast, private, and secure.
 
-**Version embarquée :** 1.8.7
+**Version incluse :** 1.8.7~ynh1
+
+**Démo :** https://file.pizza/
 
 ## Captures d'écran
 
-![](https://etherpad.org/img/etherpad_demo.gif)
+![](./doc/screenshots/screenshot.png)
 
-## Démo
+## Documentations et ressources
 
-* [Démo officielle](https://video.etherpad.com/)
+* Site officiel de l'app : https://file.pizza/
+* Dépôt de code officiel de l'app : https://github.com/kern/filepizza
+* Documentation YunoHost pour cette app : https://yunohost.org/app_filepizza
+* Signaler un bug : https://github.com/YunoHost-Apps/filepizza_ynh/issues
 
-## Configuration
+## Informations pour les développeurs
 
-Vous pouvez accéder au panneau d'administration d'Etherpad à l'adresse `domain.tld/admin`. Le fichier de configuration d'Etherpad est `/var/www/etherpad/settings.json`.
+Merci de faire vos pull request sur la [branche testing](https://github.com/YunoHost-Apps/filepizza_ynh/tree/testing).
 
-*Skin Builder* (accessible à l'adresse `domain.tld/pad/p/test#skinvariantsbuilder`) vous permet de personnaliser l'apparence de votre pad. Il vous donnera un paramètre à copier dans votre fichier de configuration `/var/www/etherpad/settings.json`.
-
-## Documentation
-
- * Documentation officielle : http://etherpad.org/doc/v1.8.7
- * Documentation YunoHost : https://yunohost.org/#/app_etherpad
-
-## Fonctionnalités spécifiques à YunoHost
-
-#### Support multi-utilisateurs
-
- * L'authentification LDAP est-elle prise en charge ? **Non**
- * L'application peut-elle être utilisée par plusieurs utilisateurs ? **Oui**
-
-#### Architectures supportées
-
-* x86-64 - [![](https://ci-apps.yunohost.org/ci/logs/etherpad%20%28Apps%29.svg)](https://ci-apps.yunohost.org/ci/apps/etherpad/)
-* ARMv8-A - [![](https://ci-apps-arm.yunohost.org/ci/logs/etherpad%20%28Apps%29.svg)](https://ci-apps-arm.yunohost.org/ci/apps/etherpad/)
-
-## Limitations
-
-## Informations additionnelles
-
-## Liens
-
- * Reporter un bug : https://github.com/YunoHost-Apps/etherpad_ynh/issues
- * Dépôt GitHub de l'application : https://github.com/ether/etherpad-lite
- * Site de YunoHost : https://yunohost.org/
-
----
-
-## Informations à l'intention des développeurs
-
-Merci de faire vos pull request sur la [branche testing](https://github.com/YunoHost-Apps/etherpad_ynh/tree/testing).
-
-Pour tester la branche testing, merci de procéder ainsi.
+Pour essayer la branche testing, procédez comme suit.
 ```
-sudo yunohost app install https://github.com/YunoHost-Apps/etherpad_ynh/tree/testing --debug
+sudo yunohost app install https://github.com/YunoHost-Apps/filepizza_ynh/tree/testing --debug
 ou
-sudo yunohost app upgrade etherpad -u https://github.com/YunoHost-Apps/etherpad_ynh/tree/testing --debug
+sudo yunohost app upgrade filepizza -u https://github.com/YunoHost-Apps/filepizza_ynh/tree/testing --debug
 ```
+
+**Plus d'infos sur le packaging d'applications :** https://yunohost.org/packaging_apps
