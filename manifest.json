@@ -6,7 +6,7 @@
         "en": "Peer-to-peer file transfers in your browser",
         "fr": "Transferts de fichiers pair-à-pair dans votre navigateur"
     },
-    "version": "1.1.0~ynh2",
+    "version": "1.1.0~ynh3",
     "url": "https://file.pizza/",
         "upstream": {
         "license": "BSD-3-Clause",
