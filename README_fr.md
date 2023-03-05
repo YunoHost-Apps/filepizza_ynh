@@ -5,15 +5,16 @@ It shall NOT be edited by hand.
 
 # FilePizza pour YunoHost
 
-[![Niveau d'intégration](https://dash.yunohost.org/integration/filepizza.svg)](https://dash.yunohost.org/appci/app/filepizza) ![Statut du fonctionnement](https://ci-apps.yunohost.org/ci/badges/filepizza.status.svg) ![Statut de maintenance](https://ci-apps.yunohost.org/ci/badges/filepizza.maintain.svg)  
+[![Niveau d’intégration](https://dash.yunohost.org/integration/filepizza.svg)](https://dash.yunohost.org/appci/app/filepizza) ![Statut du fonctionnement](https://ci-apps.yunohost.org/ci/badges/filepizza.status.svg) ![Statut de maintenance](https://ci-apps.yunohost.org/ci/badges/filepizza.maintain.svg)
+
 [![Installer FilePizza avec YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=filepizza)
 
 *[Read this readme in english.](./README.md)*
 
-> *Ce package vous permet d'installer FilePizza rapidement et simplement sur un serveur YunoHost.
-Si vous n'avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) pour savoir comment l'installer et en profiter.*
+> *Ce package vous permet d’installer FilePizza rapidement et simplement sur un serveur YunoHost.
+Si vous n’avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) pour savoir comment l’installer et en profiter.*
 
-## Vue d'ensemble
+## Vue d’ensemble
 
 Using WebRTC, FilePizza eliminates the initial upload step required by other web-based file sharing services. When senders initialize a transfer, they receive a "tempalink" they can distribute to recipients. Upon visiting this link, recipients' browsers connect directly to the sender’s browser and may begin downloading the selected file. Because data is never stored in an intermediary server, the transfer is fast, private, and secure.
 
@@ -21,14 +22,14 @@ Using WebRTC, FilePizza eliminates the initial upload step required by other web
 
 **Démo :** https://file.pizza/
 
-## Captures d'écran
+## Captures d’écran
 
-![Capture d'écran de FilePizza](./doc/screenshots/screenshot.png)
+![Capture d’écran de FilePizza](./doc/screenshots/screenshot.png)
 
 ## Documentations et ressources
 
-* Site officiel de l'app : <https://file.pizza/>
-* Dépôt de code officiel de l'app : <https://github.com/kern/filepizza>
+* Site officiel de l’app : <https://file.pizza/>
+* Dépôt de code officiel de l’app : <https://github.com/kern/filepizza>
 * Documentation YunoHost pour cette app : <https://yunohost.org/app_filepizza>
 * Signaler un bug : <https://github.com/YunoHost-Apps/filepizza_ynh/issues>
 
@@ -44,4 +45,4 @@ ou
 sudo yunohost app upgrade filepizza -u https://github.com/YunoHost-Apps/filepizza_ynh/tree/testing --debug
 ```
 
-**Plus d'infos sur le packaging d'applications :** <https://yunohost.org/packaging_apps>
+**Plus d’infos sur le packaging d’applications :** <https://yunohost.org/packaging_apps>
