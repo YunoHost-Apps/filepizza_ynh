@@ -18,6 +18,7 @@ code = "https://github.com/kern/filepizza"
 [integration]
 yunohost = ">= 11.1.13"
 architectures = "all"
+multi_instance = true
 ldap = false
 sso = false
 disk = "50M"
