@@ -5,7 +5,7 @@ name = "FilePizza"
 description.en = "Peer-to-peer file transfers in your browser"
 description.fr = "Transferts de fichiers pair-à-pair dans votre navigateur"
 
-version = "1.1.0~ynh3"
+version = "1.1.0~ynh4"
 
 maintainers = ["eric_G"]
 
