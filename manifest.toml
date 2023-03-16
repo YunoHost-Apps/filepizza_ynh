@@ -16,7 +16,7 @@ demo = "https://file.pizza/"
 code = "https://github.com/kern/filepizza"
 
 [integration]
-yunohost = ">= 11.1.13"
+yunohost = ">= 11.1.15"
 architectures = "all"
 multi_instance = true
 ldap = false
@@ -35,6 +35,13 @@ ram.runtime = "50M"
     default = "visitors"
 
 [resources]
+
+    [resources.sources]
+
+        [resources.sources.main]
+        url = "https://github.com/kern/filepizza/archive/e4fb3431fb5f3b3e5593e44df3837017ffc10f86.tar.gz"
+        sha256 = "41afd7f607490db9263ea8a4a6a179cbc700f18cbf7670334a6d92fed413d7bf"
+
     [resources.ports]
     
     [resources.system_user]
