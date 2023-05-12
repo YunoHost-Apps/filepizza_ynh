@@ -16,7 +16,7 @@ demo = "https://file.pizza/"
 code = "https://github.com/kern/filepizza"
 
 [integration]
-yunohost = ">= 11.1.17"
+yunohost = ">= 11.1.19"
 architectures = "all"
 multi_instance = true
 ldap = false
