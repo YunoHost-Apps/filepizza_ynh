@@ -30,7 +30,7 @@ Using WebRTC, FilePizza eliminates the initial upload step required by other web
 
 * Site officiel de l’app : <https://file.pizza/>
 * Dépôt de code officiel de l’app : <https://github.com/kern/filepizza>
-* Documentation YunoHost pour cette app : <https://yunohost.org/app_filepizza>
+* YunoHost Store: <https://apps.yunohost.org/app/filepizza>
 * Signaler un bug : <https://github.com/YunoHost-Apps/filepizza_ynh/issues>
 
 ## Informations pour les développeurs
