@@ -32,7 +32,6 @@ if [ "$upgrade_type" == "UPGRADE_APP" ]
 then
 	ynh_script_progression --message="Upgrading source files..." --weight=1
 
-	# Download, check integrity, uncompress and patch the source from app.src
 	ynh_setup_source --dest_dir="$install_dir"
 fi
 
@@ -44,14 +43,11 @@ chown -R $app:www-data "$install_dir"
 #=================================================
 ynh_script_progression --message="Upgrading NGINX web server configuration..." --weight=1
 
-# Create a dedicated NGINX config
 ynh_add_nginx_config
 
-# Install Nodejs
 ynh_exec_warn_less ynh_install_nodejs --nodejs_version=$nodejs_version
 
 env_path="$PATH"
-# Create a dedicated systemd config
 ynh_add_systemd_config
 
 yunohost service add $app --description="Peer-to-peer file transfers" --log="/var/log/$app/$app.log"

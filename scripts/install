@@ -21,7 +21,6 @@ ynh_install_nodejs --nodejs_version=$nodejs_version
 #=================================================
 ynh_script_progression --message="Setting up source files..." --weight=1
 
-# Download, check integrity, uncompress and patch the source from app.src
 ynh_setup_source --dest_dir="$install_dir"
 
 chmod -R o-rwx "$install_dir"
@@ -32,11 +31,9 @@ chown -R $app:www-data "$install_dir"
 #=================================================
 ynh_script_progression --message="Configuring NGINX web server..." --weight=4
 
-# Create a dedicated NGINX config
 ynh_add_nginx_config
 
 env_path="$PATH"
-# Create a dedicated systemd config
 ynh_add_systemd_config
 
 yunohost service add $app --description="Peer-to-peer file transfers" --log="/var/log/$app/$app.log"
@@ -57,7 +54,6 @@ popd
 #=================================================
 ynh_script_progression --message="Starting a systemd service..." --weight=6
 
-# Start a systemd service
 ynh_systemd_action --service_name=$app --action=restart --log_path="systemd"
 
 #=================================================
