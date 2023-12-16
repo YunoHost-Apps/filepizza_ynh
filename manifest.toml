@@ -47,6 +47,7 @@ ram.runtime = "50M"
         autoupdate.strategy = "latest_github_commit"
 
     [resources.ports]
+    turn.default = 3478
     
     [resources.system_user]
 
