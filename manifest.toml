@@ -5,7 +5,7 @@ name = "FilePizza"
 description.en = "Peer-to-peer file transfers in your browser"
 description.fr = "Transferts de fichiers pair-à-pair dans votre navigateur"
 
-version = "1.1.0~ynh6"
+version = "1.1.0~ynh7"
 
 maintainers = ["eric_G"]
 
@@ -47,6 +47,7 @@ ram.runtime = "50M"
         autoupdate.strategy = "latest_github_commit"
 
     [resources.ports]
+    turn.default = 3478
     
     [resources.system_user]
 
