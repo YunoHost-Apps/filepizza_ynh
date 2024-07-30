@@ -7,7 +7,7 @@ description.fr = "Transferts de fichiers pair-à-pair dans votre navigateur"
 
 version = "1.1.0~ynh7"
 
-maintainers = ["eric_G"]
+maintainers = []
 
 [upstream]
 license = "BSD-3-Clause"

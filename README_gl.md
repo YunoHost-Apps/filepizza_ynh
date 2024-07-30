@@ -5,7 +5,7 @@ NON debe editarse manualmente.
 
 # FilePizza para YunoHost
 
-[![Nivel de integración](https://dash.yunohost.org/integration/filepizza.svg)](https://dash.yunohost.org/appci/app/filepizza) ![Estado de funcionamento](https://ci-apps.yunohost.org/ci/badges/filepizza.status.svg) ![Estado de mantemento](https://ci-apps.yunohost.org/ci/badges/filepizza.maintain.svg)
+[![Nivel de integración](https://dash.yunohost.org/integration/filepizza.svg)](https://ci-apps.yunohost.org/ci/apps/filepizza/) ![Estado de funcionamento](https://ci-apps.yunohost.org/ci/badges/filepizza.status.svg) ![Estado de mantemento](https://ci-apps.yunohost.org/ci/badges/filepizza.maintain.svg)
 
 [![Instalar FilePizza con YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=filepizza)
 
