@@ -5,7 +5,7 @@
 
 # YunoHost 上的 FilePizza
 
-[![集成程度](https://dash.yunohost.org/integration/filepizza.svg)](https://dash.yunohost.org/appci/app/filepizza) ![工作状态](https://ci-apps.yunohost.org/ci/badges/filepizza.status.svg) ![维护状态](https://ci-apps.yunohost.org/ci/badges/filepizza.maintain.svg)
+[![集成程度](https://dash.yunohost.org/integration/filepizza.svg)](https://ci-apps.yunohost.org/ci/apps/filepizza/) ![工作状态](https://ci-apps.yunohost.org/ci/badges/filepizza.status.svg) ![维护状态](https://ci-apps.yunohost.org/ci/badges/filepizza.maintain.svg)
 
 [![使用 YunoHost 安装 FilePizza](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=filepizza)
 

@@ -5,7 +5,7 @@ No se debe editar a mano.
 
 # FilePizza para Yunohost
 
-[![Nivel de integración](https://dash.yunohost.org/integration/filepizza.svg)](https://dash.yunohost.org/appci/app/filepizza) ![Estado funcional](https://ci-apps.yunohost.org/ci/badges/filepizza.status.svg) ![Estado En Mantención](https://ci-apps.yunohost.org/ci/badges/filepizza.maintain.svg)
+[![Nivel de integración](https://dash.yunohost.org/integration/filepizza.svg)](https://ci-apps.yunohost.org/ci/apps/filepizza/) ![Estado funcional](https://ci-apps.yunohost.org/ci/badges/filepizza.status.svg) ![Estado En Mantención](https://ci-apps.yunohost.org/ci/badges/filepizza.maintain.svg)
 
 [![Instalar FilePizza con Yunhost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=filepizza)
 
@@ -26,7 +26,7 @@ Using WebRTC, FilePizza eliminates the initial upload step required by other web
 
 ![Captura de FilePizza](./doc/screenshots/screenshot.png)
 
-## :red_circle: funcionalidades no deseadas
+## :red_circle: Características no deseables
 
 - **Upstream not maintained**: This software is not maintained anymore. Expect it to break down over time, be exposed to unfixed security breaches, etc.
 
