@@ -10,7 +10,7 @@ WorkingDirectory=__INSTALL_DIR__
 Environment="PATH=__ENV_PATH__"
 Environment="PORT=__PORT__"
 Environment="NODE_ENV=production"
-ExecStart=__YNH_NODE__ ./dist/index.js
+ExecStart=__NODEJS_DIR__/node ./dist/index.js
 Restart=always
 
 # Sandboxing options to harden security
