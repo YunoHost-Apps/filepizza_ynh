@@ -17,8 +17,6 @@ ynh_script_progression "Setting up source files..."
 
 ynh_setup_source --dest_dir="$install_dir"
 
-#REMOVEME? Assuming the install dir is setup using ynh_setup_source, the proper chmod/chowns are now already applied and it shouldn't be necessary to tweak perms | chmod -R o-rwx "$install_dir"
-#REMOVEME? Assuming the install dir is setup using ynh_setup_source, the proper chmod/chowns are now already applied and it shouldn't be necessary to tweak perms | chown -R $app:www-data "$install_dir"
 #=================================================
 # NGINX CONFIGURATION
 #=================================================
@@ -26,7 +24,6 @@ ynh_script_progression "Configuring NGINX web server..."
 
 ynh_config_add_nginx
 
-env_path="$PATH"
 ynh_config_add_systemd
 
 yunohost service add $app --description="Peer-to-peer file transfers" --log="/var/log/$app/$app.log"
@@ -37,9 +34,8 @@ yunohost service add $app --description="Peer-to-peer file transfers" --log="/va
 ynh_script_progression "Installing the app..."
 
 pushd "$install_dir"
-
- 	ynh_hide_warnings ynh_exec_as_app node_load_PATH npm install
-	ynh_hide_warnings ynh_exec_as_app node_load_PATH npm run-script build
+ 	ynh_hide_warnings ynh_exec_as_app npm install
+	ynh_hide_warnings ynh_exec_as_app npm run-script build
 popd
 
 #=================================================
