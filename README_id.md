@@ -5,7 +5,9 @@ Ini TIDAK boleh diedit dengan tangan.
 
 # FilePizza untuk YunoHost
 
-[![Tingkat integrasi](https://dash.yunohost.org/integration/filepizza.svg)](https://ci-apps.yunohost.org/ci/apps/filepizza/) ![Status kerja](https://ci-apps.yunohost.org/ci/badges/filepizza.status.svg) ![Status pemeliharaan](https://ci-apps.yunohost.org/ci/badges/filepizza.maintain.svg)
+[![Tingkat integrasi](https://apps.yunohost.org/badge/integration/filepizza)](https://ci-apps.yunohost.org/ci/apps/filepizza/)
+![Status kerja](https://apps.yunohost.org/badge/state/filepizza)
+![Status pemeliharaan](https://apps.yunohost.org/badge/maintained/filepizza)
 
 [![Pasang FilePizza dengan YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=filepizza)
 
@@ -18,7 +20,7 @@ Ini TIDAK boleh diedit dengan tangan.
 
 Using WebRTC, FilePizza eliminates the initial upload step required by other web-based file sharing services. When senders initialize a transfer, they receive a "tempalink" they can distribute to recipients. Upon visiting this link, recipients' browsers connect directly to the sender’s browser and may begin downloading the selected file. Because data is never stored in an intermediary server, the transfer is fast, private, and secure.
 
-**Versi terkirim:** 1.1.0~ynh7
+**Versi terkirim:** 2025.01.05~ynh1
 
 **Demo:** <https://file.pizza/>
 

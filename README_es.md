@@ -5,7 +5,9 @@ No se debe editar a mano.
 
 # FilePizza para Yunohost
 
-[![Nivel de integración](https://dash.yunohost.org/integration/filepizza.svg)](https://ci-apps.yunohost.org/ci/apps/filepizza/) ![Estado funcional](https://ci-apps.yunohost.org/ci/badges/filepizza.status.svg) ![Estado En Mantención](https://ci-apps.yunohost.org/ci/badges/filepizza.maintain.svg)
+[![Nivel de integración](https://apps.yunohost.org/badge/integration/filepizza)](https://ci-apps.yunohost.org/ci/apps/filepizza/)
+![Estado funcional](https://apps.yunohost.org/badge/state/filepizza)
+![Estado En Mantención](https://apps.yunohost.org/badge/maintained/filepizza)
 
 [![Instalar FilePizza con Yunhost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=filepizza)
 
@@ -18,7 +20,7 @@ No se debe editar a mano.
 
 Using WebRTC, FilePizza eliminates the initial upload step required by other web-based file sharing services. When senders initialize a transfer, they receive a "tempalink" they can distribute to recipients. Upon visiting this link, recipients' browsers connect directly to the sender’s browser and may begin downloading the selected file. Because data is never stored in an intermediary server, the transfer is fast, private, and secure.
 
-**Versión actual:** 1.1.0~ynh7
+**Versión actual:** 2025.01.05~ynh1
 
 **Demo:** <https://file.pizza/>
 
@@ -39,7 +41,7 @@ Using WebRTC, FilePizza eliminates the initial upload step required by other web
 
 ## Información para desarrolladores
 
-Por favor enviar sus correcciones a la [`branch testing`](https://github.com/YunoHost-Apps/filepizza_ynh/tree/testing
+Por favor enviar sus correcciones a la [rama `testing`](https://github.com/YunoHost-Apps/filepizza_ynh/tree/testing).
 
 Para probar la rama `testing`, sigue asÍ:
 
