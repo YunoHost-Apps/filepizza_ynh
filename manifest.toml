@@ -14,6 +14,7 @@ license = "BSD-3-Clause"
 website = "https://file.pizza/"
 demo = "https://file.pizza/"
 code = "https://github.com/kern/filepizza"
+fund = "https://commerce.coinbase.com/pay/84f58214-142c-4d5d-ad0b-c275972eee8a"
 
 [integration]
 yunohost = ">= 12.0.9"
