@@ -33,9 +33,10 @@ yunohost service add $app --description="Peer-to-peer file transfers" --log="/va
 #=================================================
 ynh_script_progression "Installing the app..."
 
-pushd "$install_dir"
- 	ynh_hide_warnings ynh_exec_as_app npm install
- 	ynh_hide_warnings ynh_exec_as_app npm build
+pushd $install_dir
+    ynh_hide_warnings corepack enable && corepack prepare pnpm@latest --activate
+    ynh_hide_warnings pnpm install
+    ynh_hide_warnings pnpm run build
 popd
 
 #=================================================
