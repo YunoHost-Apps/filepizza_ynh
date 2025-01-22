@@ -15,7 +15,7 @@ ynh_systemctl --service=$app --action="stop" --log_path="systemd"
 #=================================================
 ynh_script_progression "Upgrading source files..."
 
-ynh_setup_source --dest_dir="$install_dir"
+ynh_setup_source --dest_dir="$install_dir" --full_replace
 
 #=================================================
 # NGINX CONFIGURATION
@@ -35,9 +35,10 @@ yunohost service add $app --description="Peer-to-peer file transfers" --log="/va
 #=================================================
 ynh_script_progression "Installing the app..."
 
-pushd "$install_dir"
- 	ynh_hide_warnings ynh_exec_as_app npm install
-	ynh_hide_warnings ynh_exec_as_app npm run-script build
+pushd $install_dir
+    ynh_hide_warnings corepack enable && corepack prepare pnpm@latest --activate
+    ynh_hide_warnings pnpm install
+    ynh_hide_warnings pnpm run build
 popd
 
 #=================================================
