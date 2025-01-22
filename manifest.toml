@@ -5,7 +5,7 @@ name = "FilePizza"
 description.en = "Peer-to-peer file transfers in your browser"
 description.fr = "Transferts de fichiers pair-à-pair dans votre navigateur"
 
-version = "1.1.0~ynh7"
+version = "2.0.0~ynh1"
 
 maintainers = []
 
@@ -14,14 +14,15 @@ license = "BSD-3-Clause"
 website = "https://file.pizza/"
 demo = "https://file.pizza/"
 code = "https://github.com/kern/filepizza"
+fund = "https://commerce.coinbase.com/pay/84f58214-142c-4d5d-ad0b-c275972eee8a"
 
 [integration]
-yunohost = ">= 11.2"
+yunohost = ">= 12.0.9"
+helpers_version = "2.1"
 architectures = "all"
 multi_instance = true
 
 ldap = false
-
 sso = false
 
 disk = "50M"
@@ -41,8 +42,8 @@ ram.runtime = "50M"
     [resources.sources]
 
         [resources.sources.main]
-        url = "https://github.com/kern/filepizza/archive/e4fb3431fb5f3b3e5593e44df3837017ffc10f86.tar.gz"
-        sha256 = "41afd7f607490db9263ea8a4a6a179cbc700f18cbf7670334a6d92fed413d7bf"
+        url = "https://github.com/kern/filepizza/archive/1f8096bcab6dc752e8af2db359d635f9171f7eba.tar.gz"
+        sha256 = "af95d262f0ee02d845ab8d4beb0bdb6c7794809e0c1e7003a7d6242a5b4cbd05"
         autoupdate.upstream = "https://github.com/kern/filepizza"
         autoupdate.strategy = "latest_github_commit"
 
