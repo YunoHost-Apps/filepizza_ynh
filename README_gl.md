@@ -20,7 +20,7 @@ NON debe editarse manualmente.
 
 Using WebRTC, FilePizza eliminates the initial upload step required by other web-based file sharing services. When senders initialize a transfer, they receive a "tempalink" they can distribute to recipients. Upon visiting this link, recipients' browsers connect directly to the sender’s browser and may begin downloading the selected file. Because data is never stored in an intermediary server, the transfer is fast, private, and secure.
 
-**Versión proporcionada:** 2.0.0~ynh1
+**Versión proporcionada:** 2025.02.02~ynh1
 
 **Demo:** <https://file.pizza/>
 
