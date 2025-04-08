@@ -1,5 +1,10 @@
 #!/bin/bash
 
+#=================================================
+# IMPORT GENERIC HELPERS
+#=================================================
+
+# Keep this path for calling _common.sh inside the execution's context of backup and restore scripts
 source ../settings/scripts/_common.sh
 source /usr/share/yunohost/helpers
 
@@ -25,27 +30,26 @@ ynh_script_progression "Reinstalling dependencies..."
 ynh_nodejs_install
 
 pushd "$install_dir"
-    ynh_hide_warnings corepack enable && corepack prepare pnpm@latest --activate
+	ynh_hide_warnings corepack enable && corepack prepare pnpm@latest --activate
 popd
 
 #=================================================
-# RESTORE SYSTEMD
+# RESTORE SYSTEM CONFIGURATION
 #=================================================
-ynh_script_progression "Restoring $app's systemd service..."
+ynh_script_progression "Restoring system configurations related to $app..."
 
 ynh_restore "/etc/nginx/conf.d/$domain.d/$app.conf"
 
 ynh_restore "/etc/systemd/system/$app.service"
-systemctl enable $app.service --quiet
-
-yunohost service add $app --description="Peer-to-peer file transfers" --log="/var/log/$app/$app.log"
+systemctl enable "$app.service" --quiet
+yunohost service add "$app" --description="Peer-to-peer file transfers" --log="/var/log/$app/$app.log"
 
 #=================================================
-# START SYSTEMD SERVICE
+# RELOAD NGINX AND PHP-FPM OR THE APP SERVICE
 #=================================================
-ynh_script_progression "Starting $app's systemd service..."
+ynh_script_progression "Reloading NGINX web server and $app's service..."
 
-ynh_systemctl --service=$app --action="start" --log_path="systemd"
+ynh_systemctl --service="$app" --action="start" --log_path="systemd"
 
 ynh_systemctl --service=nginx --action=reload
 
