@@ -44,7 +44,7 @@ popd
 ynh_script_progression "Starting $app's systemd service..."
 
 # Start a systemd service
-ynh_systemctl --service="$app" --action=restart --log_path="systemd"
+ynh_systemctl --service="$app" --action=restart
 
 #=================================================
 # END OF SCRIPT

@@ -18,9 +18,7 @@ ynh_restore "$install_dir"
 #=================================================
 ynh_script_progression "Reinstalling dependencies..."
 
-pushd "$install_dir"
-	ynh_hide_warnings corepack enable && corepack prepare pnpm@latest --activate
-popd
+ynh_hide_warnings corepack enable && corepack prepare pnpm@latest --activate
 
 #=================================================
 # RESTORE SYSTEM CONFIGURATION
@@ -31,6 +29,7 @@ ynh_restore "/etc/nginx/conf.d/$domain.d/$app.conf"
 
 ynh_restore "/etc/systemd/system/$app.service"
 systemctl enable "$app.service" --quiet
+
 yunohost service add "$app" --description="Peer-to-peer file transfers" --log="/var/log/$app/$app.log"
 
 #=================================================
@@ -38,7 +37,7 @@ yunohost service add "$app" --description="Peer-to-peer file transfers" --log="/
 #=================================================
 ynh_script_progression "Reloading NGINX web server and $app's service..."
 
-ynh_systemctl --service="$app" --action="start" --log_path="systemd"
+ynh_systemctl --service="$app" --action="start"
 
 ynh_systemctl --service=nginx --action=reload
 
