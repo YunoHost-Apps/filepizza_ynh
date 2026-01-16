@@ -4,7 +4,6 @@
 # IMPORT GENERIC HELPERS
 #=================================================
 
-source _common.sh
 source /usr/share/yunohost/helpers
 
 #=================================================
@@ -12,12 +11,7 @@ source /usr/share/yunohost/helpers
 #=================================================
 ynh_script_progression "Stopping $app's systemd service..."
 
-ynh_systemctl --service="$app" --action="stop" --log_path="systemd"
-
-#=================================================
-# ENSURE DOWNWARD COMPATIBILITY
-#=================================================
-ynh_script_progression "Ensuring downward compatibility..."
+ynh_systemctl --service="$app" --action="stop"
 
 #=================================================
 # DOWNLOAD, CHECK AND UNPACK SOURCE
@@ -28,13 +22,6 @@ ynh_script_progression "Upgrading source files..."
 ynh_setup_source --dest_dir="$install_dir" --full_replace
 
 #=================================================
-# INSTALL DEPENDENCIES
-#=================================================
-ynh_script_progression "Installing dependencies..."
-
-ynh_nodejs_install
-
-#=================================================
 # REAPPLY SYSTEM CONFIGURATION
 #=================================================
 ynh_script_progression "Upgrading system configurations related to $app..."
@@ -42,6 +29,7 @@ ynh_script_progression "Upgrading system configurations related to $app..."
 ynh_config_add_nginx
 
 ynh_config_add_systemd
+
 yunohost service add "$app" --description="Peer-to-peer file transfers" --log="/var/log/$app/$app.log"
 
 #=================================================
@@ -60,7 +48,7 @@ popd
 #=================================================
 ynh_script_progression "Starting $app's systemd service..."
 
-ynh_systemctl --service="$app" --action="start" --log_path="systemd"
+ynh_systemctl --service="$app" --action="start"
 
 #=================================================
 # END OF SCRIPT
