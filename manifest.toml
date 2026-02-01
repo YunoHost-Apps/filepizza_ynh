@@ -7,7 +7,7 @@ name = "FilePizza"
 description.en = "Peer-to-peer file transfers in your browser"
 description.fr = "Transferts de fichiers pair-à-pair dans votre navigateur"
 
-version = "2026.01.16~ynh1"
+version = "2026.01.31~ynh1"
 
 maintainers = []
 
@@ -44,8 +44,8 @@ ram.runtime = "50M"
     [resources.sources]
 
     [resources.sources.main]
-    url = "https://github.com/kern/filepizza/archive/3bd340d24bb86938450c1eb9e66ae601167b1bba.tar.gz"
-    sha256 = "188a69c158582812526ea7281f8c469ac54cb07fb45336369f923651d92822ee"
+    url = "https://github.com/kern/filepizza/archive/3258673e790145ba86637114a35388165a651ff3.tar.gz"
+    sha256 = "00458f07efbe68839102a3a7f0df8a6b96338ed82233ab9094c5510e7abdab5e"
     autoupdate.upstream = "https://github.com/kern/filepizza"
     autoupdate.strategy = "latest_github_commit"
 
