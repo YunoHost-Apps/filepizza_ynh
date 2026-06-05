@@ -33,8 +33,8 @@ yunohost service add $app --description="Peer-to-peer file transfers" --log="/va
 ynh_script_progression "Installing the app..."
 
 pushd $install_dir
+    ynh_config_add --template="pnpm-workspace.yaml" --destination="$install_dir/pnpm-workspace.yaml"
     ynh_hide_warnings corepack enable && corepack prepare pnpm@latest --activate
-    ynh_hide_warnings pnpm approve-builds sharp esbuild @tailwindcss/oxide unrs-resolver
     ynh_hide_warnings ynh_exec_as_app pnpm install
     ynh_hide_warnings ynh_exec_as_app pnpm run build
 popd
