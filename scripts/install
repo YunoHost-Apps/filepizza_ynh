@@ -34,7 +34,8 @@ ynh_script_progression "Installing the app..."
 
 pushd $install_dir
     ynh_hide_warnings corepack enable && corepack prepare pnpm@latest --activate
-    ynh_hide_warnings pnpm  --allow-build=sharp,esbuild,@tailwindcss/oxide,unrs-resolver install
+    pnpm -v
+    ynh_hide_warnings pnpm install
     ynh_hide_warnings pnpm run build
 popd
 
